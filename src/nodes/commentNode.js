@@ -18,6 +18,7 @@ export const Comment = ({ id, data }) => {
         textarea={comment}
         setTextarea={setComment}
         istextarea={true}
+        placeholder={"write your comment"}
       />
       {/* <textarea onChange={(t) => setComment(t)} placeholder="Your Comment">
           {comment}
