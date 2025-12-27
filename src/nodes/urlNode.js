@@ -4,7 +4,7 @@ import Common from './Common'
 
 export const UrlNode = ({id, data}) => {
     console.log(data, "kdjkld")
-    const [url, setUrl] = useState(data?.url || "Enter Url");
+    const [url, setUrl] = useState(data?.url || "Enter url");
 
      const handleUrlChange = (e) => {
     setUrl(e.target.value);
@@ -12,7 +12,7 @@ export const UrlNode = ({id, data}) => {
 
   return (
     <>
-        <Common nodeType={"URL Input"} id={id} isInput={true} inputLabel={"url"} currName={url} setCurrName={setUrl}/>
+        <Common nodetype={"URL Input"} id={id} isInput={true} inputLabel={"url"} currName={url} setCurrName={setUrl}/>
     </>
   )
 }

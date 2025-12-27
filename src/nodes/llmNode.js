@@ -1,10 +1,9 @@
 // llmNode.js
 
-import { Handle, Position } from 'reactflow';
-import Common from './Common';
+import { Handle, Position } from "reactflow";
+import Common from "./Common";
 
 export const LLMNode = ({ id, data }) => {
-
   return (
     // <div style={{width: 200, height: 80, border: '1px solid black'}}>
     // <div>
@@ -33,9 +32,14 @@ export const LLMNode = ({ id, data }) => {
     //     id={`${id}-response`}
     //   /> */}
     // </div>
-    <Common handleIdName = {"response"} nodetype={"LLM"} data={data} id={id} isInput={false}>
-    <span>This is a LLM.</span>
+    <Common
+      handleIdName={"response"}
+      nodetype={"LLM"}
+      data={data}
+      id={id}
+      isInput={false}
+    >
+      <span>This is a LLM.</span>
     </Common>
-
   );
-}
+};

@@ -11,6 +11,12 @@ import { LLMNode } from './nodes/llmNode';
 import { OutputNode } from './nodes/outputNode';
 import { TextNode } from './nodes/textNode';
 import { UrlNode } from './nodes/urlNode';
+import { Filter } from './nodes/filterNode';
+import { Comment } from './nodes/commentNode';
+import { Note } from './nodes/notes.Node';
+import { Label } from './nodes/labelNode';
+
+
 
 import 'reactflow/dist/style.css';
 
@@ -21,7 +27,12 @@ const nodeTypes = {
   llm: LLMNode,
   customOutput: OutputNode,
   text: TextNode,
-  urlNode: UrlNode
+  url: UrlNode,
+  filter: Filter, 
+  comment: Comment, 
+  notes: Note, 
+  label: Label
+
 };
 
 const selector = (state) => ({

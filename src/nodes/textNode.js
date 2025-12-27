@@ -25,7 +25,6 @@ export const TextNode = ({ id, data }) => {
         currName={currText}
         setCurrName={setCurrText}
 
-
         // isInput={false}
       />
       {/* <div>
