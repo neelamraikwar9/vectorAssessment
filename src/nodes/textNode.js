@@ -1,31 +1,37 @@
 // textNode.js
 
-import { useState } from 'react';
-import { Handle, Position } from 'reactflow';
-import Common from './Common';
+import { useState } from "react";
+import { Handle, Position } from "reactflow";
+import Common from "./Common";
 
 export const TextNode = ({ id, data }) => {
-
-  const [currText, setCurrText] = useState(data?.text || '{{input}}');
+  const [currText, setCurrText] = useState(data?.text || "{{input}}");
 
   const handleTextChange = (e) => {
     setCurrText(e.target.value);
   };
 
-
-
   return (
-    <>
+    // <div style={{width: 200, height: 80, border: '1px solid black'}}>
 
-    <div style={{width: 200, height: 80, border: '1px solid black'}}>
+    <div>
+      <Common
+        handleIdName={"output"}
+        nodetype={"Text"}
+        data={data}
+        id={id}
+        isInput={true}
+        inputLabel={"Text"}
+        currName={currText}
+        setCurrName={setCurrText}
 
 
-
-
-      <div>
+        // isInput={false}
+      />
+      {/* <div>
         <span>Text</span>
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <label>
           Text:
           <input 
@@ -34,24 +40,12 @@ export const TextNode = ({ id, data }) => {
             onChange={handleTextChange} 
           />
         </label>
-      </div>
-      <Handle
+      </div> */}
+      {/* <Handle
         type="source"
         position={Position.Right}
         id={`${id}-output`}
-      />
+      /> */}
     </div>
-
-
-    </> 
-
   );
-}
-
-
-
-  ////</div>  <div>
-    //// <Common handleIdName = {"output"} nodetype={"Text"} data={data} id={id} 
-    // isnameType={false} 
-    // isInput={false}
-    // />
+};
