@@ -16,10 +16,6 @@ export const Note = ({ id, data }) => {
         istextarea={true}
         placeholder={"add note..."}
       />
-      {/* <textarea onChange={(t) => setNote(t)} placeholder="Write Note">
-          {note}
-        </textarea>
-      </Common> */}
     </>
   );
 };

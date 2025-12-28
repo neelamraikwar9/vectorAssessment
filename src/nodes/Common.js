@@ -1,10 +1,10 @@
 // import React from 'react'
 import "./node.css";
 import { Handle, Position } from "reactflow";
-import {forwardRef,  useState } from "react";
+import { forwardRef, useState } from "react";
 
 const Common = forwardRef((props) => {
-    const handleNameChange = (e) => {
+  const handleNameChange = (e) => {
     setCurrName(e.target.value);
   };
 
@@ -26,18 +26,13 @@ const Common = forwardRef((props) => {
     setTextarea = () => {},
     istextarea = false,
     rows = 2,
-    handleChangeFn=handleNameChange,
-    ref=null
+    handleChangeFn = handleNameChange,
+    handleType = "",
+    ref = null,
   } = props;
   console.log(children, "jfowifjoweifow", children?.props?.children);
 
-  // console.log(rows, "kjfjdkf")
-
-  // const [currName, setCurrName] = useState(
-  //   data?.inputName || id.replace("customInput-", "input_")
-  // );
   const [inputType, setInputType] = useState(data.inputType || "Text");
-
 
   const handleTypeChange = (e) => {
     setInputType(e.target.value);
@@ -59,15 +54,14 @@ const Common = forwardRef((props) => {
         <div>
           <label>
             <p className="label">{inputLabel}:</p>
-            {/* <input type="text" value={currName} onChange={handleNameChange} /> */}
+
             <textarea
-              // rows="5"
+              className="autoTextaria"
               ref={ref}
-              rows={rows}
               type="text"
               value={currName}
               onChange={handleChangeFn}
-            ></textarea>
+            />
           </label>
         </div>
       )}
@@ -103,13 +97,8 @@ const Common = forwardRef((props) => {
 
       <div>{children}</div>
       <Handle
-        type="source"
+        type={handleType}
         position={Position.Right}
-        id={`${id}-${handleIdName}`}
-      />
-      <Handle
-        type="source"
-        position={Position.Left}
         id={`${id}-${handleIdName}`}
       />
     </div>

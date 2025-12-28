@@ -5,10 +5,6 @@ export const Comment = ({ id, data }) => {
   console.log(data, "kdjkld");
   const [comment, setComment] = useState(data?.comment || "");
 
-  //   const handleCommentChange = () => {
-  //     setComment(e.target.value);
-  //   }
-
   return (
     <>
       <Common
@@ -20,10 +16,6 @@ export const Comment = ({ id, data }) => {
         istextarea={true}
         placeholder={"write your comment"}
       />
-      {/* <textarea onChange={(t) => setComment(t)} placeholder="Your Comment">
-          {comment}
-        </textarea> */}
-      {/* </Common> */}
     </>
   );
 };
